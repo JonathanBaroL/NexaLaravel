@@ -9,7 +9,7 @@ class ShowMovies extends Component
 {
     public $title;
 
-    public $search = "";
+    public $search;
 
     public function mount($title){
         $this->title = $title;
@@ -18,7 +18,8 @@ class ShowMovies extends Component
     public function render()
     {
         // Sacar peliculas de API
-        $movies = Http::get('https://www.omdbapi.com/?s=Batman&page=1&apikey=f1a6aefc');
+        dump($this->search);
+        $movies = Http::get('https://www.omdbapi.com/?s=Superman&page=1&apikey=f1a6aefc');
         $movies = $movies->object();
         $movies = $movies->Search;
         return view('livewire.show-movies', compact('movies') ?? []);

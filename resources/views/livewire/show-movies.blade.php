@@ -9,6 +9,7 @@
 
     <div class="px-6 py-4">
         <input type="text" wire:model="search">
+        <div>Pelicula a buscar {{ $search }}</div>
     </div>
 
     <div class="flex flex-col">
@@ -27,7 +28,7 @@
                             <th scope="col">action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-white text-xl">
                         @if($movies)
                             @foreach ($movies as $movie)
                                 <tr
