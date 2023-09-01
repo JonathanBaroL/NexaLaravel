@@ -1,0 +1,1 @@
+<img src="\build\assets\1572308553588.jpg" style="width: 30%" class="max-w-full " alt="">
